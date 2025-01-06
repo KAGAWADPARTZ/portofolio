@@ -5,7 +5,7 @@ const MobileHome = ({ isMenuOpen, toggleMenu }) => {
   return (
     <>
       {isMenuOpen && (
-        <div className="lg:hidden bg-background text-white flex flex-col gap-4 items-end p-4 space-y-2 font-semibold mt-2">
+        <div className="lg:hidden bg-background text-white flex flex-col gap-2 items-end p-4 space-y-2 font-semibold">
           <Link
             className="hover:bg-white hover:text-background p-4 rounded w-1/3 text-right"
             to = "/"

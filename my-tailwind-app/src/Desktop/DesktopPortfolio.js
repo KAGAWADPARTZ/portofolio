@@ -1,6 +1,6 @@
 import "../App.css";
 import React, { useState } from "react";
-import MobileHome from "../Mobile/MobileHome.js"; // Import the MobileMenu component
+import MobileHome from "../Mobile/MobileNavigation.js"; // Import the MobileMenu component
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function DesktopPortfolio() {
@@ -11,8 +11,6 @@ function DesktopPortfolio() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  const name = "Partz";
 
   return (
     <div className="w-full h-screen flex flex-col bg-background text-white font-sans p-2">
