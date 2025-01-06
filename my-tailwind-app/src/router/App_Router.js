@@ -11,7 +11,7 @@ function AppRouter() {
       <Routes>
         {/* routes */}
         <Route path="/" element={<DesktopHome/>} />
-        <Route path="/Porfolio" element={<DesktopPortfolio />} />
+        <Route path="/Portfolio" element={<DesktopPortfolio />} />
         <Route path="/About" element={<DesktopAbout />} />
       </Routes>
     </Router>

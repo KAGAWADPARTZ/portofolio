@@ -1,11 +1,14 @@
 import "../App.css";
 import React, { useState, useEffect } from "react";
+import { FaMoon, FaRegSun } from "react-icons/fa"; 
 import MobileMenu from "../Mobile/MobileNavigation.js";
 import { Link } from "react-router-dom";
 import danielitoImage from "../images/danielito.jpg";
 
 function DesktopView() {
+   // State to track menu toggle
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // State to track Dark/light mode
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Toggle the menu visibility
@@ -37,8 +40,19 @@ function DesktopView() {
       <title>Home</title>
 
       {/* Navigation bar */}
-      <div className="w-full h-16 flex items-center p-4 bg-LightBackground dark:bg-gray-800 text-black dark:text-white">
-        <span className="text-xl font-semibold">My Portfolio</span>
+      <div className="w-full h-16 flex items-center justify-between p-4 bg-LightBackground dark:bg-gray-800 text-black dark:text-white">
+        {/* Light/Dark Mode Button */}
+        <button
+          className="text-lg font-medium p-2 rounded-md border border-gray-300 dark:border-gray-700 transition-transform duration-300 hover:scale-110 flex items-center gap-2"
+          onClick={toggleTheme}
+        >
+          {isDarkMode ? <FaRegSun /> : <FaMoon />}
+          <span className="sr-only">
+            {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          </span>
+        </button>
+
+        {/* Hamburger icon for smaller screens */}
         <button
           className="ml-auto text-2xl lg:hidden"
           onClick={toggleMenu}
@@ -46,12 +60,8 @@ function DesktopView() {
         >
           ☰
         </button>
-        <button
-          className="ml-4 text-lg font-medium p-2 rounded-md border border-gray-300 dark:border-gray-700 transition-transform duration-300 hover:scale-110"
-          onClick={toggleTheme}
-        >
-          {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-        </button>
+
+        {/* Navigation links for larger screens */}
         <div className="hidden lg:flex gap-12 p-4 ml-auto text-xl font-medium">
           <Link
             className="hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white rounded-md p-2"
