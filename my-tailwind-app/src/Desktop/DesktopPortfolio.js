@@ -39,7 +39,7 @@ function DesktopPortfolio() {
       <title>Home</title>
 
       {/* Navigation bar */}
-      <div className="w-full h-16 flex items-center justify-between p-4 bg-LightBackground dark:bg-gray-800 text-black dark:text-white">
+      <div className="w-full h-16 flex items-center justify-between p-4 bg-gray-200 dark:bg-gray-800 text-DarkBackground dark:text-LightBackground">
         {/* Light/Dark Mode Button */}
         <button
           className="text-lg font-medium p-2 rounded-md border border-gray-300 dark:border-gray-700 transition-transform duration-300 hover:scale-110 flex items-center gap-2"

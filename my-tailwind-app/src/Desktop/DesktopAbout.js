@@ -39,7 +39,7 @@ function DesktopAbout() {
       <title>Home</title>
 
       {/* Navigation bar */}
-      <div className="w-full h-16 flex items-center justify-between p-4 bg-LightBackground dark:bg-DarkBackground text-black dark:text-white">
+      <div className="w-full h-16 flex items-center justify-between p-4 bg-gray-200 dark:bg-gray-800 text-DarkBackground dark:text-LightBackground">
         {/* Light/Dark Mode Button */}
         <button
           className="text-lg font-medium p-2 rounded-md border border-gray-300 dark:border-gray-700 transition-transform duration-300 hover:scale-110 flex items-center gap-2"
@@ -88,7 +88,7 @@ function DesktopAbout() {
 
         
         {/* Page content */}
-    <div className="flex flex-col mt-6 gap-6 p-4 justify-start items-center lg:flex-row lg:justify-between lg:items-start md:mt-10 h-full overflow-auto">
+    <div className="flex flex-col mt-6 gap-4 p-4 justify-start items-center lg:flex-row lg:justify-between lg:items-start md:mt-10 h-full overflow-auto">
       {/* Left div: About Info */}
       <div className="md:w-1/2 lg:w-1/2 flex flex-col justify-center items-center text-center p-4 rounded-lg">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">About Me</h1>
@@ -114,13 +114,13 @@ function DesktopAbout() {
        
         <p className="mt-4 text-lg sm:text-xl md:text-2xl">
           Bachelor of Computer Science<br />
-          XYZ University<br />
+          Iloilo Science And<br /> Technolgy University <br/>
           Present
         </p>
       </div>
 
       <div className="md:w-1/2 lg:w-1/2 flex flex-col justify-center items-center text-center  p-4 rounded-lg" >
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Education</h1>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Skills</h1>
         <p className="mt-4 text-lg sm:text-xl md:text-2xl">
           Bachelor of Computer Science<br />
           XYZ University<br />
