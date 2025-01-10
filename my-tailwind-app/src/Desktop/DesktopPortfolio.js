@@ -4,6 +4,7 @@ import MobileMenu from "../Mobile/MobileNavigation.js"; // Import the MobileMenu
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { FaMoon, FaRegSun } from "react-icons/fa"; // Import the icons
 
+
 function DesktopPortfolio() {
    // State to track menu toggle
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,9 +36,13 @@ function DesktopPortfolio() {
   }, [isDarkMode]);
 
   return (
-    <div className="w-full h-screen flex flex-col bg-LightBackground dark:bg-gray-900 text-black dark:text-white font-sans p-2">
+    <div
+    className="w-full h-screen flex flex-col 
+    bg-gradient-to-r from-Azure via-Aqua to-BrightBlue 
+    dark:from-slate-800 dark:via-slate-900 dark:to-slate-950 
+    animate-gradient-x text-black dark:text-white font-sans p-2"
+      >
       <title>Home</title>
-
       {/* Navigation bar */}
       <div className="w-full h-16 flex items-center justify-between p-4 bg-gray-200 dark:bg-gray-800 text-DarkBackground dark:text-LightBackground">
         {/* Light/Dark Mode Button */}
@@ -91,6 +96,7 @@ function DesktopPortfolio() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">I'm Daniel, a</h1>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Web Developer!</h1>
       </div>
+     
     </div>
   );
 }
