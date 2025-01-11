@@ -27,7 +27,7 @@
 @keyframes wavelight {
   0%, 100% {
     transform: translateY(0);
-    color: #22c55e;
+    color: #a855f7;
     ; /* Dark mode color */
   }
   50% {
@@ -77,6 +77,24 @@
 }
 .wavelight:nth-child(12) {
   animation-delay: 1.1s;
+}
+.wavelight:nth-child(14) {
+  animation-delay: 1.2s;
+}
+.wavelight:nth-child(15) {
+  animation-delay: 1.3s;
+}
+.wavelight:nth-child(16) {
+  animation-delay: 1.4s;
+}
+.wavelight:nth-child(17) {
+  animation-delay: 1.5s;
+}
+.wavelight:nth-child(18) {
+  animation-delay: 1.6s;
+}
+.wavelight:nth-child(19) {
+  animation-delay: 1.7s;
 }
 
 /* Hide scrollbar */

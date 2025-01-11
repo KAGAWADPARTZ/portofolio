@@ -1,102 +1,109 @@
 import "../App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import MobileMenu from "../Mobile/MobileNavigation.js"; // Import the MobileMenu component
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import { FaMoon, FaRegSun } from "react-icons/fa"; // Import the icons
-
+import MatrixBackground from "./Matrix.js";
+import NavigationBar from "./NavigationBar.js";
+import Footer from "./Footer.js";
 
 function DesktopPortfolio() {
-   // State to track menu toggle
+  // State to track menu toggle
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-   // State to track Dark/light mode
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Toggle the menu visibility
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Toggle the theme
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
-  };
-
-  // Persist theme across sessions (optional)
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
-
   return (
     <div
-    className="w-full h-screen flex flex-col 
-    bg-gradient-to-r from-Azure via-Aqua to-BrightBlue 
-    dark:from-slate-800 dark:via-slate-900 dark:to-slate-950 
-    animate-gradient-x text-black dark:text-white font-sans p-2"
-      >
-      <title>Home</title>
+      className="w-full h-screen flex flex-col justify-between 
+       text-green-500 font-sans p-2 overflow-auto"
+    >
+      <MatrixBackground />
+
+      <title>Portfolio</title>
+
       {/* Navigation bar */}
-      <div className="w-full h-16 flex items-center justify-between p-4 bg-gray-200 dark:bg-gray-800 text-DarkBackground dark:text-LightBackground">
-        {/* Light/Dark Mode Button */}
-        <button
-          className="text-lg font-medium p-2 rounded-md border border-gray-300 dark:border-gray-700 transition-transform duration-300 hover:scale-110 flex items-center gap-2"
-          onClick={toggleTheme}
-        >
-          {isDarkMode ? <FaRegSun /> : <FaMoon />}
-          <span className="sr-only">
-            {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-          </span>
-        </button>
+      <button
+        className="ml-auto p-2 text-2xl lg:hidden text-LightBackground"
+        onClick={toggleMenu}
+        aria-label="Toggle Menu"
+      >
+        ☰
+      </button>
 
-        {/* Hamburger icon for smaller screens */}
-        <button
-          className="ml-auto text-2xl lg:hidden"
-          onClick={toggleMenu}
-          aria-label="Toggle Menu"
-        >
-          ☰
-        </button>
+      <NavigationBar />
 
-        {/* Navigation links for larger screens */}
-        <div className="hidden lg:flex gap-12 p-4 ml-auto text-xl font-medium">
-          <Link
-            className="hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white rounded-md p-2"
-            to="/"
+      <MobileMenu
+        className="lg:hidden"
+        isMenuOpen={isMenuOpen}
+        toggleMenu={toggleMenu}
+      />
+    
+      {/* Main Content */}
+      <div className="flex flex-grow flex-col gap-16 px-4 text-center lg:flex-row lg:justify-center lg:items-center lg:px-16">
+        {/* Laundry System */}
+        <div className=" text-white p-6 rounded-lg shadow-md flex flex-col items-center">
+          <h2 className="text-xl font-bold mb-4">Laundry System</h2>
+          <p className="mb-4">
+            A mobile app designed for <span className="font-bold text-purple-500">LAUNDRY SHOPS</span> in your area, enabling efficient <span className="font-bold text-purple-500">TRACKING</span> and <span className="font-bold text-purple-500">MANAGEMENT</span> of laundry orders.
+          </p>
+          <p className="text-sm mb-4 text-LightBackground">
+            Tech Stack: <span className="font-bold text-purple-500">Android Studio</span>, <span className="font-bold text-purple-500">Firebase Database</span>
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1XPsndQM7wHvbKKqTLdzVD5j-3AwL2gI-/view?usp=sharing"
+            className="text-purple-500 font-bold hover:underline hover:scale-110"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Home
-          </Link>
-          <Link
-            className="hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white rounded-md p-2"
-            to="/Portfolio"
+            View Project →
+          </a>
+        </div>
+            {/*text-purple-500*/}
+        {/* Online Ordering System */}
+        <div className=" text-LightBackground p-6 rounded-lg shadow-md flex flex-col items-center">
+          <h2 className="text-xl font-bold mb-4">Online Ordering System</h2>
+          <p className="mb-4">
+            A <span className="font-bold text-purple-500">WEB-BASED SYSTEM</span> FOR ORDERING GROCERIES ONLINE, DESGNED TO MAKE<span className="font-bold text-purple-500">SHOPPING CONVENIENT</span> and <span className="font-bold text-purple-500">EFFICIENT</span>.
+          </p>
+          <p className="text-sm mb-4 text-LightBackground">
+            Tech Stack: <span className="font-bold text-purple-500">React</span>, <span className="font-bold text-purple-500">Tailwind</span>, <span className="font-bold text-purple-500">Firebase Database</span>
+          </p>
+          <a
+            href="https://isatu-coop.vercel.app/login"
+            className="text-purple-500 font-bold hover:underline hover:scale-110"
+             target="_blank"
+             rel="noopener noreferrer"
           >
-            Portfolio
-          </Link>
-          <Link
-            className="hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white rounded-md p-2"
-            to="/About"
+            View Project →
+          </a>
+        </div>
+
+        {/* Blog Website */}
+        <div className=" text-LightBackground p-6 rounded-lg shadow-md flex flex-col items-center">
+          <h2 className="text-xl font-bold mb-4">My Blog Website</h2>
+          <p className="mb-4">
+            A <span className="font-bold text-purple-500">BLOG</span> WHERE I SHARE INSIGHTS ABOUT <span className="font-bold text-purple-500">CODING CHALLENGES</span> AND <span className="font-bold text-purple-500">SOLUTIONS</span>, <span className="font-bold text-purple-500">AIMED AT HELPING FELLOW DEVELOPERS</span>.
+          </p>
+          <p className="text-sm mb-4 text-LightBackground">
+            Tech Stack: <span className="font-bold text-purple-500">HTML</span>, <span className="font-bold text-purple-500">CSS</span>, <span className="font-bold text-purple-500">JavaScript</span>, <span className="font-bold text-purple-500">MySQL</span>, <span className="font-bold text-purple-500">XAMPP Apache</span>
+          </p>
+          <a
+            href="http://danielinocenciobscs4a.infinityfreeapp.com/index?i=2"
+            className="text-purple-500 font-bold hover:underline hover:scale-110"
+             target="_blank"
+             rel="noopener noreferrer"
           >
-            About
-          </Link>
+            View Project →
+          </a>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <MobileMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-
-      {/* Page content */}
-      <div className="flex justify-center flex-col gap-6 p-4 text-center font-semibold mt-16">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">I'm Daniel, a</h1>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Web Developer!</h1>
+      {/* Footer */}
+      <div>
+        <Footer />
       </div>
-     
     </div>
   );
 }

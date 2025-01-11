@@ -1,11 +1,11 @@
 import React from "react";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
-import MatrixBackground from "./Matrix";
+import "../App.css"
 
 function Footer() {
   return (
-    <div className="w-full h-10 bg-transparent text-white py-8 px-4 text-center">
+    <div className="w-full h-1/2 lg:h-1/2 bg-transparent text-white py-8 px-4 text-center font-sans ">
        
       <div className="flex flex-col lg:flex-row justify-evenly items-center gap-8">
         {/* Location and Contact Info */}
@@ -38,11 +38,6 @@ function Footer() {
           </p>
         </div>
 
-        {/* About Section */}
-        <div className="flex flex-col items-center justify-end">
-          <h2 className="text-lg font-bold mb-2">About</h2>
-          <p>danielnocencio11@gmail.com</p>
-        </div>
       </div>
 
       {/* Copyright Section */}
@@ -56,3 +51,4 @@ function Footer() {
 }
 
 export default Footer;
+

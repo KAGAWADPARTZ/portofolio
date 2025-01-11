@@ -87,11 +87,11 @@ body {
       height: 100%;
       top: 0;
       left: 0;
-      color: white;
+      color: #FAF9F6;
       content: "#{nth($column, $column-position)}";
       padding-top: ($column-position - 1) * $matrix-line-height;
       overflow: hidden;
-      animation: column-#{$i} #{$frames-count * 80ms} infinite steps(1, start);
+      animation: column-#{$i} #{$frames-count * 60ms} infinite steps(1, start);
     }
   }
 
