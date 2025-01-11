@@ -19,6 +19,8 @@ import MatrixBackground from "./Matrix.js";
 import { FaCircleInfo } from "react-icons/fa6";
 import Footer from "./Footer.js";
 
+
+
 function DesktopAbout() {
   // State to track menu toggle
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,19 +35,10 @@ function DesktopAbout() {
       className="w-full h-screen flex flex-col 
        text-green-500 font-sans p-2 hidden-scrollbar" 
     >
-      <title>Home</title>
+     
       <MatrixBackground/>
-      {/* Navigation bar */}
-       {/* Navigation bar */}
-       <button
-              className="ml-auto p-2 text-2xl lg:hidden text-LightBackground"
-              onClick={toggleMenu}
-              aria-label="Toggle Menu"
-            >
-              ☰
-            </button>
-      
-     <NavigationBar/>
+      {/* Navigation bar */}     
+      <NavigationBar toggleMenu={toggleMenu} />
 
       {/* Mobile Menu */}
       <MobileMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />

@@ -21,18 +21,8 @@ function DesktopPortfolio() {
     >
       <MatrixBackground />
 
-      <title>Portfolio</title>
-
       {/* Navigation bar */}
-      <button
-        className="ml-auto p-2 text-2xl lg:hidden text-LightBackground"
-        onClick={toggleMenu}
-        aria-label="Toggle Menu"
-      >
-        ☰
-      </button>
-
-      <NavigationBar />
+      <NavigationBar toggleMenu={toggleMenu} />
 
       <MobileMenu
         className="lg:hidden"

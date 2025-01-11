@@ -12,19 +12,18 @@ function DesktopView() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const [currentText, setCurrentText] = useState("Web Dev!");
-  const rotatingTexts = ["Mobile Dev!", "Desktop Dev!", "Web Dev!"];
+  const [currentText, setCurrentText] = useState(""); // Initial empty state
+const rotatingTexts = ["Web Dev!", "Desktop Dev!", "Mobile Dev!"];
 
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      index = (index + 1) % rotatingTexts.length;
-      setCurrentText(rotatingTexts[index]);
-    }, 3000); // Change every 3 seconds
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, );
-
-  
+useEffect(() => {
+  let index = 0;
+  const interval = setInterval(() => {
+    setCurrentText(rotatingTexts[index]);
+    index = (index + 1) % rotatingTexts.length;
+  }, 3000);
+   // Change every 3 seconds
+  return () => clearInterval(interval); // Cleanup interval on unmount
+}, []);
 
   return (
     <div
@@ -32,24 +31,14 @@ function DesktopView() {
        text-green-500 font-sans p-2 hidden-scrollbar" 
     >
       <MatrixBackground />
-
-      <title>Home</title>
-
-      {/* Navigation bar */}
-       <button
-              className="ml-auto p-2 text-2xl lg:hidden text-LightBackground"
-              onClick={toggleMenu}
-              aria-label="Toggle Menu"
-            >
-              ☰
-            </button>
       
-     <NavigationBar/>
+      {/* Navigation bar */}
+            <NavigationBar toggleMenu={toggleMenu} />
 
       <MobileMenu className="lg:hidden" isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}  />
 
       {/* Main Content */}
-      <div className="flex flex-col md:gap-4 justify-center items-center lg:flex-row lg:justify-start lg:items-center md:mt-10 flex-grow object-contain overflow-hidden">
+      <div className="flex flex-col md:gap-4 mt-4 justify-center items-center lg:flex-row lg:justify-start lg:items-center md:mt-10 flex-grow object-contain">
         <div className="md:w-1/2 flex flex-col justify-center items-center text-center font-bold">
           <h1 className="text-2xl md:text-5xl lg:text-6xl">
             {Array.from("I'm Daniel, a").map((char, index) => (
@@ -67,7 +56,7 @@ function DesktopView() {
             ))}
           </h1>
         </div>
-        <div className="w-full lg:w-1/2 flex justify-center items-start p-4">
+        <div className="hidden w-full lg:w-1/2 lg:flex justify-center items-start p-4">
           <img
             src={danielitoImage}
             alt="Daniel"
