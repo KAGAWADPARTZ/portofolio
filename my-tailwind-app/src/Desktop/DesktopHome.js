@@ -51,7 +51,7 @@ function DesktopView() {
       {/* Main Content */}
       <div className="flex flex-col md:gap-4 justify-center items-center lg:flex-row lg:justify-start lg:items-center md:mt-10 flex-grow object-contain overflow-hidden">
         <div className="md:w-1/2 flex flex-col justify-center items-center text-center font-bold">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl">
             {Array.from("I'm Daniel, a").map((char, index) => (
               <span key={index} className="wavelight text-purple-500">
                 {char === " " ? "\u00A0" : char}
@@ -59,7 +59,7 @@ function DesktopView() {
               </span>
             ))}
           </h1>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl">
             {Array.from(currentText).map((char, index) => (
               <span key={index} className="wavelight text-purple-500">
                 {char === " " ? "\u00A0" : char}

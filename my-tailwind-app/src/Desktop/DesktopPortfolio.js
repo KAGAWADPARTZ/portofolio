@@ -65,7 +65,7 @@ function DesktopPortfolio() {
         <div className=" text-LightBackground p-6 rounded-lg shadow-md flex flex-col items-center">
           <h2 className="text-xl font-bold mb-4">Online Ordering System</h2>
           <p className="mb-4">
-            A <span className="font-bold text-purple-500">WEB-BASED SYSTEM</span> FOR ORDERING GROCERIES ONLINE, DESGNED TO MAKE<span className="font-bold text-purple-500">SHOPPING CONVENIENT</span> and <span className="font-bold text-purple-500">EFFICIENT</span>.
+            A <span className="font-bold text-purple-500">WEB-BASED SYSTEM</span> for ordering groceries online, designed to make<span className="font-bold text-purple-500">SHOPPING CONVENIENT</span> and <span className="font-bold text-purple-500">EFFICIENT</span>.
           </p>
           <p className="text-sm mb-4 text-LightBackground">
             Tech Stack: <span className="font-bold text-purple-500">React</span>, <span className="font-bold text-purple-500">Tailwind</span>, <span className="font-bold text-purple-500">Firebase Database</span>
@@ -84,7 +84,7 @@ function DesktopPortfolio() {
         <div className=" text-LightBackground p-6 rounded-lg shadow-md flex flex-col items-center">
           <h2 className="text-xl font-bold mb-4">My Blog Website</h2>
           <p className="mb-4">
-            A <span className="font-bold text-purple-500">BLOG</span> WHERE I SHARE INSIGHTS ABOUT <span className="font-bold text-purple-500">CODING CHALLENGES</span> AND <span className="font-bold text-purple-500">SOLUTIONS</span>, <span className="font-bold text-purple-500">AIMED AT HELPING FELLOW DEVELOPERS</span>.
+            a <span className="font-bold text-purple-500">BLOG</span> where I share insights about <span className="font-bold text-purple-500">CODING CHALLENGES</span> and <span className="font-bold text-purple-500">SOLUTIONS</span>, <span className="font-bold text-purple-500">AIMED AT HELPING FELLOW DEVELOPERS</span>.
           </p>
           <p className="text-sm mb-4 text-LightBackground">
             Tech Stack: <span className="font-bold text-purple-500">HTML</span>, <span className="font-bold text-purple-500">CSS</span>, <span className="font-bold text-purple-500">JavaScript</span>, <span className="font-bold text-purple-500">MySQL</span>, <span className="font-bold text-purple-500">XAMPP Apache</span>

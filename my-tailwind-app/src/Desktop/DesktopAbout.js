@@ -13,6 +13,8 @@ import imgMysql from "../images/mysql.webp";
 import imgTailwind from "../images/tailwinds.png";
 import imgPython from "../images/python-logo.png";
 import imgR from "../images/R_logo..png";
+import imgPhp from "../images/php-icon.png";
+import imgXampp from "../images/Xampp.png";
 import MatrixBackground from "./Matrix.js";
 import { FaCircleInfo } from "react-icons/fa6";
 import Footer from "./Footer.js";
@@ -107,6 +109,8 @@ function DesktopAbout() {
             <img src={imgTailwind} alt="Tailwind CSS Logo" className="w-20 h-20" />
             <img src={imgPython} alt="MySQL Logo" className="w-20 h-20" />
             <img src={imgR} alt="Tailwind CSS Logo" className="w-20 h-20" />
+            <img src={imgXampp} alt="MySQL Logo" className="w-20 h-20" />
+            <img src={imgPhp} alt="Tailwind CSS Logo" className="w-20 h-20" />
           </div>
         </div>
 

@@ -27,15 +27,15 @@ function Footer() {
         {/* Social Media Links */}
         <div className="flex flex-col gap-6 items-center">
           <h2 className="text-lg font-bold mb-2">Social Media</h2>
-          <p className="flex items-center gap-2">
+          <a className="flex items-center gap-2" href=" https://www.instagram.com/partztzy/" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="text-purple-500" /> Instagram
-          </p>
-          <p className="flex items-center gap-2">
+          </a>
+          <a className="flex items-center gap-2" href=" https://github.com/KAGAWADPARTZ" target="_blank" rel="noopener noreferrer">
             <FaGithub className="text-purple-500" /> Github
-          </p>
-          <p className="flex items-center gap-2">
+          </a>
+          <a className="flex items-center gap-2" href=" https://www.linkedin.com/in/daniel-inocencio-07724a311" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="text-purple-500" /> LinkedIn
-          </p>
+          </a>
         </div>
 
       </div>
