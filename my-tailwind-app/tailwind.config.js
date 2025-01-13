@@ -10,6 +10,10 @@ module.exports = {
       Aqua : '#00FFFF',
       BabyBlue : '#89CFF0',
       BrightBlue : '#0096FF',
+      Mustard : '#FFDB58',
+      NavyBlue : '#000080',
+      Rose : '#FF007F',
+      Compliment : '#FF8080',
 
 
     },

@@ -42,7 +42,7 @@ useEffect(() => {
         <div className="md:w-1/2 flex flex-col justify-center items-center text-center font-bold">
           <h1 className="text-2xl md:text-5xl lg:text-6xl">
             {Array.from("I'm Daniel, a").map((char, index) => (
-              <span key={index} className="wavelight text-purple-500">
+              <span key={index} className="wavelight text-Mustard">
                 {char === " " ? "\u00A0" : char}
                  
               </span>
@@ -50,7 +50,7 @@ useEffect(() => {
           </h1>
           <h1 className="text-2xl md:text-5xl lg:text-6xl">
             {Array.from(currentText).map((char, index) => (
-              <span key={index} className="wavelight text-purple-500">
+              <span key={index} className="wavelight text-Mustard">
                 {char === " " ? "\u00A0" : char}
               </span>
             ))}

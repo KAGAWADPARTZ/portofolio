@@ -27,7 +27,7 @@
 @keyframes wavelight {
   0%, 100% {
     transform: translateY(0);
-    color: #a855f7;
+    color: #FFDB58;
     ; /* Dark mode color */
   }
   50% {
